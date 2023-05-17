@@ -41,16 +41,21 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="mobile-menu-open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="mobile-menu-open-icon" width="32" height="22">
+            <use href="./images/svg-images/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
         <address class="main-address">
           <ul class="list address-container">
-            <li class="menu-item">
+            <li class="menu-item menu-item-address">
               <a
                 class="address-mail-phone link"
                 href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
-            <li class="menu-item">
+            <li class="menu-item menu-item-address">
               <a class="address-mail-phone link" href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
@@ -58,13 +63,82 @@
           </ul>
         </address>
       </div>
+
+      <!-- Mobile Menu  -->
+      <div class="mobile-menu js-menu-container" id="mobile-menu">
+        <div class="container mobile-menu-container">
+          <button class="mobile-menu-close-btn js-close-menu">
+            <svg class="mobile-menu-close-btn-icon" width="8" height="8">
+              <use href="./images/svg-images/sprite.svg#icon-close-modal" ></use>
+            </svg>
+          </button>
+
+          <ul class="mobile-menu-pages list">
+            <li class="mobile-menu-pages-item">
+              <a href="./index.html" class="mobile-menu-pages-link link active">Studio</a>
+            </li>
+            <li class="mobile-menu-pages-item">
+              <a href="./portfolio.html" class="mobile-menu-pages-link link">Portfolio</a>
+            </li>
+            <li class="mobile-menu-pages-item">
+              <a href="#" class="mobile-menu-pages-link link">Contacts</a>
+            </li>
+          </ul>
+
+          <ul class="list mobile-menu-address">
+            <li class="mobile-menu-address-item">
+              <a class="mobile-address-mail-phone mobile-phone link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mobile-menu-address-item">
+              <a
+                class="mobile-address-mail-phone mobile-mail link"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="mobile-menu-social-list list">
+            <li class="mobile-menu-social-list-item">
+              <a href="" class="mobile-menu-social-list-link">
+                <svg class="mobile-menu-social-list-icon" width="24" height="24">
+                  <use href="./images/svg-images/sprite.svg#icon-social-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu-social-list-item">
+              <a href="" class="mobile-menu-social-list-link">
+                <svg class="mobile-menu-social-list-icon" width="24" height="24">
+                  <use href="./images/svg-images/sprite.svg#icon-social-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu-social-list-item">
+              <a href="" class="mobile-menu-social-list-link">
+                <svg class="mobile-menu-social-list-icon" width="24" height="24">
+                  <use href="./images/svg-images/sprite.svg#icon-social-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu-social-list-item">
+              <a href="" class="mobile-menu-social-list-link">
+                <svg class="mobile-menu-social-list-iconactive" width="24" height="24">
+                  <use href="./images/svg-images/sprite.svg#icon-social-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <main>
       <!-- Hero -->
       <section class="hero">
         <div class="container hero-container">
-          <h1 class="main-title">Effective Solutions for Your Business</h1>
+          <h1 class="main-title">Effective Solutions <span class="mobile-letter">f</span>or Your Business</h1>
           <button type="button" class="modal-btn" data-modal-open>Order Service</button>
         </div>
       </section>
@@ -76,10 +150,10 @@
           <ul class="advantages-container list">
             <li class="block-ad-item">
               <div class="ad-icon-container">
-              <svg class="advantages-icon" width="64" height="64">
-                <use href="./images/svg-images/sprite.svg#icon-advantages-antenna"></use>
-              </svg>
-            </div>
+                <svg class="advantages-icon" width="64" height="64">
+                  <use href="./images/svg-images/sprite.svg#icon-advantages-antenna"></use>
+                </svg>
+              </div>
               <h3 class="block-item-title">Strategy</h3>
               <p class="block-text">
                 Our goal is to identify the business problem to walk away with
@@ -117,7 +191,7 @@
                 </svg>
               </div>
               <h3 class="block-item-title">Technologies</h3>
-              <p class="block-text">
+              <p class="block-text last">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
               </p>
@@ -132,28 +206,62 @@
           <h2 class="block-title center">What are we doing</h2>
           <ul class="our-work-container list">
             <li class="our-work-item">
-              <img
-                src="./images/site-example.jpg"
+              <picture>
+                <source
+                srcset="./images/our-work/site-example.webp 1x, ./images/our-work/site-example@2x.webp 2x"
+                media="(min-width: 1158px)"
+                type="image/webp"
+                />
+                <source
+                srcset="./images/our-work/site-example.jpg 1x, ./images/our-work/site-example@2x.jpg 2x"
+                media="(min-width: 1158px)"
+                />
+                <img
+                src="./images/our-work/site-example.jpg"
+                alt="Banking App Interface Concept"
+                />
+              </picture>
+              <!-- <img
+              srcset="./images/our-work/site-example@2x.jpg 2x"
+                src="./images/our-work/site-example.jpg"
                 alt="Site example"
                 width="360"
                 height="300"
-              />
+              /> -->
             </li>
             <li class="our-work-item">
-              <img
-                src="./images/chat-example.jpg"
-                alt="Group chats example"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                srcset="./images/our-work/chat-example.webp 1x, ./images/our-work/chat-example@2x.webp 2x"
+                media="(min-width: 1158px)"
+                type="image/webp"
+                />
+                <source
+                srcset="./images/our-work/chat-example.jpg 1x, ./images/our-work/chat-example@2x.jpg 2x"
+                media="(min-width: 1158px)"
+                />
+                <img
+                src="./images/our-work/chat-example.jpg"
+                alt="Banking App Interface Concept"
+                />
+              </picture>
             </li>
             <li class="our-work-item">
-              <img
-                src="./images/cross-platform-apps-example.jpg"
-                alt="Cross-platform apps example"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                srcset="./images/our-work/cross-platform-apps-example.webp 1x, ./images/our-work/cross-platform-apps-example@2x.webp 2x"
+                media="(min-width: 1158px)"
+                type="image/webp"
+                />
+                <source
+                srcset="./images/our-work/cross-platform-apps-example.jpg 1x, ./images/our-work/cross-platform-apps-example@2x.jpg 2x"
+                media="(min-width: 1158px)"
+                />
+                <img
+                src="./images/our-work/cross-platform-apps-example.jpg"
+                alt="Banking App Interface Concept"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -161,15 +269,29 @@
 
       <!-- Our Team -->
       <section class="our-team section">
-        <div class="container">
+        <div class="container special-tablet-team-container">
           <h2 class="block-title center">Our Team</h2>
           <ul class="our-team-container list">
             <li class="team-block-item">
-              <img
-                src="./images/mark-guerrero.jpg"
+              <picture>
+                <source
+                srcset="./images/team/mark-guerrero.webp 1x, ./images/team/mark-guerrero@2x.webp 2x"
+                type="image/webp"
+                />
+                <source
+                srcset="./images/team/mark-guerrero.jpg 1x, ./images/team/mark-guerrero@2x.jpg 2x"
+                />
+                <img
+                src="./images/team/mark-guerrero.jpg"
+                alt="Banking App Interface Concept"
+                />
+              </picture>
+              <!-- <img
+                srcset="./images/team/mark-guerrero@2x.jpg 2x"
+                src="./images/team/mark-guerrero.jpg"
                 alt="Portrait of Mark Guerrero"
                 width="264"
-              />
+              /> -->
               <div class="team-names">
                 <h3 class="team-block-item-title center">Mark Guerrero</h3>
                 <p class="block-text team-block-text center">Product Designer</p>
@@ -206,11 +328,19 @@
               </div>
             </li>
             <li class="team-block-item">
-              <img
-                src="./images/tom-ford.jpg"
-                alt="Portrait of Tom Ford"
-                width="264"
-              />
+              <picture>
+                <source
+                srcset="./images/team/tom-ford.webp 1x, ./images/team/tom-ford@2x.webp 2x"
+                type="image/webp"
+                />
+                <source
+                srcset="./images/team/tom-ford.jpg 1x, ./images/team/tom-ford@2x.jpg 2x"
+                />
+                <img
+                src="./images/team/tom-ford.jpg"
+                alt="Banking App Interface Concept"
+                />
+              </picture>
               <div class="team-names">
                 <h3 class="team-block-item-title center">Tom Ford</h3>
                 <p class="block-text team-block-text center">Frontend Developer</p>
@@ -247,11 +377,19 @@
               </div>
             </li>
             <li class="team-block-item">
-              <img
-                src="./images/camila-garcia.jpg"
-                alt="Portrait of Camila Garcia"
-                width="264"
-              />
+              <picture>
+                <source
+                srcset="./images/team/camila-garcia.webp 1x, ./images/team/camila-garcia@2x.webp 2x"
+                type="image/webp"
+                />
+                <source
+                srcset="./images/team/camila-garcia.jpg 1x, ./images/team/camila-garcia@2x.jpg 2x"
+                />
+                <img
+                src="./images/team/camila-garcia.jpg"
+                alt="Banking App Interface Concept"
+                />
+              </picture>
               <div class="team-names">
                 <h3 class="team-block-item-title center">Camila Garcia</h3>
                 <p class="block-text team-block-text center">Marketing</p>
@@ -287,12 +425,20 @@
                 </ul>
               </div>
             </li>
-            <li class="team-block-item">
-              <img
-                src="./images/daniel-wilson.jpg"
-                alt="Portrait of Daniel Wilson"
-                width="264"
-              />
+            <li class="team-block-item last">
+              <picture>
+                <source
+                srcset="./images/team/daniel-wilson.webp 1x, ./images/team/daniel-wilson@2x.webp 2x"
+                type="image/webp"
+                />
+                <source
+                srcset="./images/team/daniel-wilson.jpg 1x, ./images/team/daniel-wilson@2x.jpg 2x"
+                />
+                <img
+                src="./images/team/daniel-wilson.jpg"
+                alt="Banking App Interface Concept"
+                />
+              </picture>
               <div class="team-names">
                 <h3 class="team-block-item-title center">Daniel Wilson</h3>
                 <p class="block-text team-block-text center">UI Designer</p>
@@ -331,9 +477,10 @@
           </ul>
         </div>
       </section>
+
       <!-- Customers -->
       <section class="section">
-        <div class="container">
+        <div class="container special-tablet-team-container">
         <h2 class="block-title center">Customers</h2>
         <ul class="customer-list list">
           <li class="customer-list-item">
@@ -382,56 +529,58 @@
       </div>
       </section>
 
-
-
     </main>
+    
     <!-- Footer -->
     <footer class="footer footer-section">
-      <div class="container footer-container">
-        <div class="footer-logo-container">
-          <a class="logo logo-footer link" href="./index.html"
-            >Web<span class="logo-part-footer">Studio</span></a
-          >
-          <p class="block-text text-light text-footer">
-            Increase the flow of customers and sales for your business with
-            digital marketing & growth solutions.
-          </p>
-        </div>
+      <div class="container footer-container special-tablet-team-container">
 
-        <div class="footer-social-container">
-          <p class="footer-social-media-title">Social media</p>
-
-          <div class="footer-social-list-container">
-            <ul class="social-list social-list-footer list">
-              <li class="social-list-item">
-                <a href="" class="social-list-link social-list-footer-active">
-                  <svg class="social-list-icon" width="24" height="24">
-                    <use href="./images/svg-images/sprite.svg#icon-social-instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-list-item">
-                <a href="" class="social-list-link social-list-footer-active">
-                  <svg class="social-list-icon" width="24" height="24">
-                    <use href="./images/svg-images/sprite.svg#icon-social-twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-list-item">
-                <a href="" class="social-list-link social-list-footer-active">
-                  <svg class="social-list-icon" width="24" height="24">
-                    <use href="./images/svg-images/sprite.svg#icon-social-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-list-item">
-                <a href="" class="social-list-link social-list-footer-active">
-                  <svg class="social-list-iconactive" width="24" height="24">
-                    <use href="./images/svg-images/sprite.svg#icon-social-linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+        <div class="special-table-container">
+          <div class="footer-logo-container">
+            <a class="logo logo-footer link" href="./index.html"
+              >Web<span class="logo-part-footer">Studio</span></a
+            >
+            <p class="block-text text-light text-footer">
+              Increase the flow of customers and sales for your business with
+              digital marketing & growth solutions.
+            </p>
+          </div>
+  
+          <div class="footer-social-container">
+            <p class="footer-social-media-title">Social media</p>
+  
+            <div class="footer-social-list-container">
+              <ul class="social-list social-list-footer list">
+                <li class="social-list-item">
+                  <a href="" class="social-list-link social-list-footer-active">
+                    <svg class="social-list-icon" width="24" height="24">
+                      <use href="./images/svg-images/sprite.svg#icon-social-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-list-item">
+                  <a href="" class="social-list-link social-list-footer-active">
+                    <svg class="social-list-icon" width="24" height="24">
+                      <use href="./images/svg-images/sprite.svg#icon-social-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-list-item">
+                  <a href="" class="social-list-link social-list-footer-active">
+                    <svg class="social-list-icon" width="24" height="24">
+                      <use href="./images/svg-images/sprite.svg#icon-social-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-list-item">
+                  <a href="" class="social-list-link social-list-footer-active">
+                    <svg class="social-list-iconactive" width="24" height="24">
+                      <use href="./images/svg-images/sprite.svg#icon-social-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -450,6 +599,7 @@
       </div>
     </footer>
 
+    <!-- Modal  -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
@@ -503,6 +653,7 @@
       </div>
     </div>
 
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
     
   </body>
